@@ -1,0 +1,71 @@
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 48rem;
+
+  margin: 2rem auto;
+}
+
+.icon {
+    width:  3rem;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.listItem span {
+    display: block;
+    margin-left: 1.5rem;
+}
+
+.button {
+    align-self: flex-end;
+    background-color: transparent;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 2px solid;
+    border-color: #62d9c7;
+
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-family: 'Mulish', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 24rem;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #7CF3E1;
+    color: #111111;
+
+}
+
+.button:hover .arrowIcon, .button:hover span {
+    display:  none;
+}
+
+.button .birdIcon {
+    display: none;
+}
+
+.button:hover .birdIcon {
+    display: block;
+}
+
+.button .birdIcon, .button .arrowIcon {
+    width: 2rem;
+    margin-left: 0.5rem;
+}

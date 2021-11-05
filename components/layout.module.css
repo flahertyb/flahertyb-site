@@ -1,0 +1,19 @@
+.container {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+
+  max-width: 48rem;
+  margin: 2rem auto;
+}
+
+.header h1 {
+
+  margin: 0 0 0 1rem;
+}
+
