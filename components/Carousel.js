@@ -26,7 +26,7 @@ const PrevButton = ({ enabled, onClick }) => (
     </button>
 );
 
-const Carousel = ({ birds }) => {
+const Carousel = ({ slides }) => {
     const [viewportRef, embla] = useEmblaCarousel({
         loop: true,
         skipSnaps: false
@@ -35,25 +35,35 @@ const Carousel = ({ birds }) => {
     const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
     const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
 
-    return (
-        <div className={styles.emblaCarousel}>
-            <div className={styles.emblaViewport} ref={viewportRef}>
-                <div className={styles.slidesContainer}>
-                    {Object.keys(birds).map((index) => {
-                        const bird = birds[index];
-                        return (
-                                <div className={styles.imageContainer} key={index}>
-                                    <div className={styles.innerImageContainer}>
-                                        <img
-                                            className={styles.slideImage}
-                                            src={bird.srcSet}
-                                            alt={bird.name}
-                                        />
-                                    </div>
+    const onKeyDown = (embla) => (ev) => {
+        if (embla && (ev.keyCode == 37)) embla.scrollPrev();
+        if (embla && (ev.keyCode == 39)) embla.scrollNext();
+    }
 
-                                    <h3 className={styles.imageTitle}>{bird.name}</h3>
-                                    <p className={styles.imageText}>{bird.text}</p>
+    useEffect(() => {
+        document.addEventListener('keydown', onKeyDown(embla));
+        return () => window.removeEventListener('keydown', onKeyDown(embla));
+    }, [embla]);
+
+    return (
+        <div className={styles.emblaCarousel} onKeyPress={onKeyDown} tabIndex="1">
+            <div className={styles.emblaViewport} ref={viewportRef} >
+                <div className={styles.slidesContainer}>
+                    {Object.keys(slides).map((index) => {
+                        const slide = slides[index];
+                        return (
+                            <div className={styles.imageContainer} key={index}>
+                                <div className={styles.innerImageContainer}>
+                                    <img
+                                        className={styles.slideImage}
+                                        src={slide.srcSet}
+                                        alt={slide.name}
+                                    />
                                 </div>
+
+                                <h3 className={styles.imageTitle}>{slide.name}</h3>
+                                <p className={styles.imageText}>{slide.text}</p>
+                            </div>
                         );
                     })}
                 </div>

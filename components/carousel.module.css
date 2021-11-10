@@ -1,7 +1,7 @@
 .emblaCarousel {
     position: relative;
     max-width: 52rem;
-    margin: 1.5rem auto;
+    margin: 0 auto 1.5rem;
 }
 
 .emblaViewport {
@@ -45,7 +45,10 @@
 }
 
 .slideImage {
+    margin-left: 10px;
     max-height: 525px;
+    max-width: 84%;
+    position: relative;
 }
 
 .emblaButton {
@@ -58,8 +61,8 @@
     top: 40%;
     transform: translateY(-50%);
     border: 0;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     justify-content: center;
     align-items: center;
     fill: #AAAAAA;
@@ -80,11 +83,11 @@
 }
 
 .emblaButtonPrevious {
-    left: 0;
+    left: 0rem;
 }
 
 .emblaButtonNext {
-    right: 0;
+    right: 0rem;
 }
 
 .imageTitle, .imageText {
@@ -97,4 +100,14 @@
 
 .imageText {
     margin: 0.5rem auto 0;
+}
+
+@media only screen and (max-width: 668px) {
+    .emblaButton {
+        display: none;
+    }
+
+    .slideImage {
+        max-width: 100%;
+    }
 }

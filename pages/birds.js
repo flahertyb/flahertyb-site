@@ -140,7 +140,7 @@ export default function Birds() {
 
     return (
         <section>
-            <Carousel birds={birds} />
+            <Carousel slides={birds} />
         </section>
     );
 }
