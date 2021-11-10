@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import Image from 'next/image';
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./carousel.module.css";
 
@@ -58,9 +59,11 @@ const Carousel = ({ slides }) => {
             return (
               <div className={styles.imageContainer} key={index}>
                 <div className={styles.innerImageContainer}>
-                  <img
+                  <Image
                     className={styles.slideImage}
-                    src={slide.srcSet}
+                    src={slide.src}
+                    width={slide.width}
+                    height={slide.height}
                     alt={slide.name}
                   />
                 </div>
