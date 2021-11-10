@@ -5,15 +5,31 @@
 
 .header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   margin-bottom: 2rem;
 
   max-width: 48rem;
   margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
-.header h1 {
-
+.headerText {
+  font-size: 3rem;
+  font-weight: 300;
   margin: 0 0 0 1rem;
 }
 
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.container {
+  overflow: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+}

@@ -27,18 +27,18 @@ export default function Layout({ children }) {
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className={styles.borderCircle}
               height={70}
               width={70}
               alt={"Bart Flaherty"}
             />
-            <h1 className={utilStyles.heading2Xl}>
+            <h1 className={styles.headerText}>
                 Bart Flaherty
             </h1>
           </>
       </header>
 
-      <main>{children}</main>
+      <main className={styles.container}>{children}</main>
 
     </div>
   )

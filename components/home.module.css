@@ -3,16 +3,17 @@
     justify-content: center;
     flex-direction: column;
     max-width: 48rem;
-
-  margin: 2rem auto;
+    margin: 0 auto;
+    overflow: auto;
 }
 
 .icon {
-    width:  3rem;
+    width: 3rem;
 }
 
 .list {
     list-style-type: none;
+    padding: 0 2rem;
 }
 
 .listItem {
@@ -31,7 +32,7 @@
     align-self: flex-end;
     background-color: transparent;
     padding: 1rem;
-    margin: 0.5rem;
+    margin-right: 2rem;
     border: 2px solid;
     border-color: #62d9c7;
 
@@ -50,7 +51,6 @@
     cursor: pointer;
     background-color: #7CF3E1;
     color: #111111;
-
 }
 
 .button:hover .arrowIcon, .button:hover span {
@@ -69,3 +69,25 @@
     width: 2rem;
     margin-left: 0.5rem;
 }
+
+@media only screen and (max-width: 784px) {
+    .listItem svg {
+        flex-basis: 3rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .list {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .button {
+        align-self: center;
+        margin: 0 1rem;
+        min-width: unset;
+    }
+}
+
+
