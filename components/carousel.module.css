@@ -1,4 +1,4 @@
-.emblaCarousel {
+.Carousel {
   position: relative;
   max-width: 52rem;
   margin: 0 auto 1.5rem;
@@ -51,7 +51,7 @@
   position: relative;
 }
 
-.emblaButton {
+.carouselButton {
   outline: 0;
   cursor: pointer;
   background-color: transparent;
@@ -68,25 +68,25 @@
   fill: #aaaaaa;
 }
 
-.emblaButton:hover {
+.carouselButton:hover {
   fill: #62d9c7;
 }
 
-.emblaButton:disabled {
+.carouselButton:disabled {
   cursor: default;
   opacity: 0.3;
 }
 
-.emblaButtonSvg {
+.carouselButtonSvg {
   width: 100%;
   height: 100%;
 }
 
-.emblaButtonPrevious {
+.carouselButtonPrevious {
   left: 0rem;
 }
 
-.emblaButtonNext {
+.carouselButtonNext {
   right: 0rem;
 }
 
@@ -104,7 +104,7 @@
 }
 
 @media only screen and (max-width: 668px) {
-  .emblaButton {
+  .carouselButton {
     display: none;
   }
 

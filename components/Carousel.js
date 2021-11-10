@@ -4,11 +4,11 @@ import styles from "./carousel.module.css";
 
 const NextButton = ({ enabled, onClick }) => (
   <button
-    className={`${styles.emblaButton} ${styles.emblaButtonNext}`}
+    className={`${styles.carouselButton} ${styles.carouselButtonNext}`}
     onClick={onClick}
     disabled={!enabled}
   >
-    <svg className={styles.emblaButtonSvg} viewBox="0 0 238.003 238.003">
+    <svg className={styles.carouselButtonSvg} viewBox="0 0 238.003 238.003">
       <path d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z" />
     </svg>
   </button>
@@ -16,12 +16,12 @@ const NextButton = ({ enabled, onClick }) => (
 
 const PrevButton = ({ enabled, onClick }) => (
   <button
-    className={`${styles.emblaButton} ${styles.emblaButtonPrevious}`}
+    className={`${styles.carouselButton} ${styles.carouselButtonPrevious}`}
     onClick={onClick}
     disabled={!enabled}
   >
     <svg
-      className={styles.emblaButtonSvg}
+      className={styles.carouselButtonSvg}
       viewBox="0 0 238.003 238.003"
       transform="rotate(180,0,0)"
     >
@@ -50,7 +50,7 @@ const Carousel = ({ slides }) => {
   }, [embla]);
 
   return (
-    <div className={styles.emblaCarousel} onKeyPress={onKeyDown} tabIndex="1">
+    <div className={styles.Carousel} onKeyPress={onKeyDown} tabIndex="1">
       <div className={styles.emblaViewport} ref={viewportRef}>
         <div className={styles.slidesContainer}>
           {Object.keys(slides).map((index) => {
