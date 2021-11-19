@@ -3,10 +3,49 @@ import Carousel from "../components/Carousel";
 
 const birds = [
   {
+    name: "Eastern Bluebird",
+    src: "/birds/eastern-bluebird.jpeg",
+    srcSet: "/birds/eastern-bluebird 1.jpeg",
+    text: "Taken in Middletown, CT. These birds are very cute, and they know it.",
+  },
+  {
+    name: "Black-necked Stilt",
+    src: "/birds/black-necked-stilt.jpeg",
+    text: "Very funny to watch this thing skitter through the shallows. Appears both awkward and confident at the same time.",
+  },
+  {
+    name: "Common Yellowthroat",
+    src: "/birds/common-yellowthroat.jpeg",
+    srcSet: "/birds/common-yellowthroat 1.jpeg",
+    text: "Taken at the Audobon society in Wellfleet, MA. It's a kind of warbler. Nicknamed \"the yellow bandit\", you guess why.",
+  },
+  {
+    name: "Says Phoebe",
+    src: "/birds/says-phoebe.jpeg",
+    srcSet: "/birds/says-phoebe 1.jpeg",
+    text: "95% sure this is a Says Phoebe, but these Flycatchers can be tricky to identify correctly. From a backyard in Casper, WY. This one is posing for its senior yearbook picture.",
+  },
+  {
+    name: "Killdeer",
+    src: "/birds/killdeer.jpeg",
+    srcSet: "/birds/killdeer 1.jpeg",
+    text: "The facial expressions and movements of these birds embody pure anxiety. At no point in its life does a Killdeer ever appear relaxed. This one was pacing back and forth and hiding in a rocky riverbed at Teddy Roosevelt National Park in ND.",
+  },
+  {
+    name: "Common Gallinule",
+    src: "/birds/common-gallinule.jpeg",
+    text: "Extremely stylish, but maintains a chicken-like vibe. In breeding season, these can be colored more like peacocks.",
+  },
+  {
     name: "Anna's Hummingbird",
     src: "/birds/annas-hummingbird.jpeg",
     srcSet: "/birds/annas-hummingbird 1.jpeg",
-    text: "Hummingbirds beat their wings 10-15 times per second. They often have iridescent feathers. This one has a black OR magenta head depending on what direction you look at it from.",
+    text: "Anna's is one of the more common species of hummingbird you'll find in the southwest. This photo shows off the iridescent quality hummingbirds have - his head is black OR magenta depending on what direction you look at it from.",
+  },
+  {
+    name: "Costa's Hummingbird",
+    src: "/birds/costas-hummingbird.jpeg",
+    text: "Another species of hummingbird that's relatively common in the southwest. Saw dozens examples of this species on our travels, but none with such a beautiful purple scarf.",
   },
   {
     name: "Brewer's Sparrow",
@@ -21,16 +60,20 @@ const birds = [
     text: "Cardinals rule. This one lives on Cape Cod.",
   },
   {
+    name: "Orange-crowned Warbler",
+    src: "/birds/orange-crowned-warbler.jpeg",
+    text: "I know what you're thinking, but apparently it's unusual that Orange-crowned Warblers show a visible orange crown. If you don't think it's an Orange-crowned warbler, fine, tell me YOUR theory.",
+  },
+  {
+    name: "Magnificent Hummingbird",
+    src: "/birds/magnificent-hummingbird.jpeg",
+    text: "One of the larger hummingbirds you will find. As it flies by your head, sounds like a small lawnmower. If you can catch it showing its full iridesence (flaring), the top of its head looks blue as well.",
+  },
+  {
     name: "Chicken",
     src: "/birds/chicken.jpeg",
     srcSet: "/birds/chicken 1.jpeg",
     text: "I have no idea what different kinds of chickens there are. This one is very noisy and lives in upstate New York.",
-  },
-  {
-    name: "Common Yellowthroat",
-    src: "/birds/common-yellowthroat.jpeg",
-    srcSet: "/birds/common-yellowthroat 1.jpeg",
-    text: "Taken at the Audobon society in Eastham, MA. It's a kind of warbler. Nicknamed \"the yellow bandit\", I'm assuming because of its black mask over the yellow body, and not because of any particular behavior.",
   },
   {
     name: "Cooper's Hawk",
@@ -39,10 +82,9 @@ const birds = [
     text: "Watched this hawk swoop into a yard filled with bird feeders and small birds in an attempt to eat one of them. He actually tried twice and missed both times. Hope he's okay.",
   },
   {
-    name: "Eastern Bluebird",
-    src: "/birds/eastern-bluebird.jpeg",
-    srcSet: "/birds/eastern-bluebird 1.jpeg",
-    text: "Taken in Middletown, CT. These birds are very cute, and they know it.",
+    name: "Rufous Hummingbird",
+    src: "/birds/rufous-hummingbird.jpeg",
+    text: "Never caught this species in the wild - this picture is from a hummingbird enclosure at the Desert Museum outside of Tuscon. Good on him for mixing up the hummingbird color scheme!",
   },
   {
     name: "Greater Roadrunner",
@@ -54,7 +96,7 @@ const birds = [
     name: "Greater Yellowlegs",
     src: "/birds/greater-yellowlegs.jpeg",
     srcSet: "/birds/greater-yellowlegs 1.jpeg",
-    text: "Beautiful shorebird! Gets its name from its yellow legs. Taken at the Audobon society in Eastham, MA.",
+    text: "Beautiful shorebird! Gets its name from its yellow legs. Taken at the Audobon society in Wellfleet, MA.",
   },
   {
     name: "Hermit Thrush",
@@ -66,13 +108,7 @@ const birds = [
     name: "House Finch",
     src: "/birds/house-finch.jpeg",
     srcSet: "/birds/house-finch 1.jpeg",
-    text: "House Finches are way common in cities and suburbs around all kinds of human structures. They are invasive in most places they exist in North America -- but they apparently are native to the southwest. They can be brown or red. ",
-  },
-  {
-    name: "Killdeer",
-    src: "/birds/killdeer.jpeg",
-    srcSet: "/birds/killdeer 1.jpeg",
-    text: "The facial expressions and movements of these birds embody pure anxiety. At no point in its life does a Killdeer ever appear relaxed. This one was pacing back and forth and hiding in a rocky riverbed at Teddy Roosevelt National Park in ND.",
+    text: "House Finches are way common in cities and suburbs around all kinds of human structures. They are invasive in most places they exist in North America -- but they apparently are native to the southwest.",
   },
   {
     name: "Lazuli Bunting",
@@ -81,16 +117,10 @@ const birds = [
     text: "Photographed in the northern unit of Teddy Roosevelt National Park in ND.",
   },
   {
-    name: "Mountain Bluebird",
-    src: "/birds/mountain-bluebird.jpeg",
-    srcSet: "/birds/mountain-bluebird 1.jpeg",
-    text: "One of my all time favorites. Like the Eastern Bluebird, but more regal.",
-  },
-  {
     name: "Northern Mockingbird",
     src: "/birds/northern-mockingbird.jpeg",
     srcSet: "/birds/northern-mockingbird 1.jpeg",
-    text: "Did not really get to listen to this mockingbird, who was jumping around on cactuses in Saguaro National Park. I assume he imitates other birds?",
+    text: "Found this one jumping around on cactuses in Saguaro National Park. In flight, you see clear white strips across their wings.",
   },
   {
     name: "Phainopepla",
@@ -105,12 +135,6 @@ const birds = [
     text: "One of the first birds that I photographed, in a pine tree in Brewster, MA.",
   },
   {
-    name: "Says Phoebe",
-    src: "/birds/says-phoebe.jpeg",
-    srcSet: "/birds/says-phoebe 1.jpeg",
-    text: "95% sure this is a Says Phoebe. From Casper, WY. This one is posing for its senior yearbook picture.",
-  },
-  {
     name: "Squirrel",
     src: "/birds/squirrel.jpeg",
     srcSet: "/birds/squirrel 1.jpeg",
@@ -120,7 +144,7 @@ const birds = [
     name: "Western Kingbird",
     src: "/birds/western-kingbird.jpeg",
     srcSet: "/birds/western-kingbird 1.jpeg",
-    text: "The Eastern Kingbird is black and white, but apparently the Western Kingbird is mostly yellow. This one lives in North Dakota.",
+    text: "The Eastern Kingbird is black and white, but the Western Kingbird is mostly yellow. This one lives in North Dakota.",
   },
   {
     name: "Western Meadowlark",
@@ -133,6 +157,12 @@ const birds = [
     src: "/birds/yellow-rumped-warbler.jpeg",
     srcSet: "/birds/yellow-rumped-warbler 1.jpeg",
     text: "In my experience, the most common warbler you see traveling around the US. As shown here, warblers eat bugs, and I think that's why they are migratory birds. For the yellow-rumped, the yellow on their butt is actually hard to see - I look instead for the yellow on their head and sides.",
+  },
+  {
+    name: "Mountain Bluebird",
+    src: "/birds/mountain-bluebird.jpeg",
+    srcSet: "/birds/mountain-bluebird 1.jpeg",
+    text: "One of my all time favorites. More regal than the Eastern Bluebird. Rejects the 60-30-10 color scheme dogma and shows off what he can do with just the blue/white gradient.",
   },
 ];
 

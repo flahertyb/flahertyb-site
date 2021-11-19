@@ -60,7 +60,7 @@ const Carousel = ({ slides }) => {
                 <div className={styles.innerImageContainer}>
                   <img
                     className={styles.slideImage}
-                    src={slide.srcSet}
+                    src={slide.src}
                     alt={slide.name}
                   />
                 </div>
