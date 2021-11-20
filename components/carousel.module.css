@@ -24,7 +24,6 @@
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  margin-left: -10px;
 }
 
 .outerContainer {
@@ -38,6 +37,7 @@
 
 .innerImageContainer {
   position: relative;
+  min-height: 550px;
   overflow: hidden;
   display: flex;
   justify-content: center;
