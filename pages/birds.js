@@ -20,10 +20,10 @@ const birds = [
     text: "Taken at the Audobon society in Wellfleet, MA. It's a kind of warbler. Nicknamed \"the yellow bandit\", you guess why.",
   },
   {
-    name: "Says Phoebe",
+    name: "Say's Phoebe",
     src: "/birds/says-phoebe.jpeg",
     srcSet: "/birds/says-phoebe 1.jpeg",
-    text: "95% sure this is a Says Phoebe, but these Flycatchers can be tricky to identify correctly. From a backyard in Casper, WY. This one is posing for its senior yearbook picture.",
+    text: "95% sure this is a Say's Phoebe, but these Flycatchers can be tricky to identify correctly. From a backyard in Casper, WY. This one is posing for its senior yearbook picture.",
   },
   {
     name: "Killdeer",
