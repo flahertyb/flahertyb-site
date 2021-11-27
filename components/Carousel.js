@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import Image from 'next/image';
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./carousel.module.css";
 
@@ -36,6 +37,8 @@ const Carousel = ({ slides }) => {
     skipSnaps: false,
   });
 
+  const [isFirstImageLoaded, setIsFirstImageLoaded] = useState(false);
+
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
 
@@ -53,16 +56,28 @@ const Carousel = ({ slides }) => {
     <div className={styles.Carousel} onKeyPress={onKeyDown} tabIndex="1">
       <div className={styles.emblaViewport} ref={viewportRef}>
         <div className={styles.slidesContainer}>
+
           {Object.keys(slides).map((index) => {
             const slide = slides[index];
+              let imageProps = {
+                'className': styles.slideImage,
+                'layout': "fill",
+                'objectFit': "contain",
+                'quality': "100",
+                'src': slide.src,
+                'alt': slide.name,
+                'sizes': "100vw",
+                'onLoadingComplete': () => setIsFirstImageLoaded(true)
+              };
+
+              if (isFirstImageLoaded) {
+                imageProps['priority'] = true;
+              }
+
             return (
               <div className={styles.imageContainer} key={index}>
                 <div className={styles.innerImageContainer}>
-                  <img
-                    className={styles.slideImage}
-                    src={slide.src}
-                    alt={slide.name}
-                  />
+                  <Image {...imageProps} />
                 </div>
 
                 <h3 className={styles.imageTitle}>{slide.name}</h3>

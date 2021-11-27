@@ -24,7 +24,6 @@
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  margin-left: -10px;
 }
 
 .outerContainer {
@@ -38,10 +37,12 @@
 
 .innerImageContainer {
   position: relative;
+  min-height: 624px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #333;
 }
 
 .slideImage {
@@ -83,11 +84,11 @@
 }
 
 .carouselButtonPrevious {
-  left: 0rem;
+  left: -3rem;
 }
 
 .carouselButtonNext {
-  right: 0rem;
+  right: -3rem;
 }
 
 .imageTitle,
@@ -103,12 +104,22 @@
   margin: 0.5rem auto 0;
 }
 
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 925px) {
+  .carouselButton {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 831px) {
   .carouselButton {
     display: none;
   }
 
   .slideImage {
     max-width: 100%;
+  }
+
+  .innerImageContainer {
+    min-height: 75vw;
   }
 }
