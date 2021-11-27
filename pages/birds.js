@@ -28,7 +28,7 @@ const birds = [
     text: "Absolutely love the eyebrows on this guy.",
   },
   {
-    name: "Says Phoebe",
+    name: "Say's Phoebe",
     src: "/birds/says-phoebe.jpeg",
     text: "95% sure this is a Says Phoebe, but these Flycatchers can be tricky to identify correctly. From a backyard in Casper, WY. This one is posing for its senior yearbook picture.",
   },
