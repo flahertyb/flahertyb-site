@@ -3,6 +3,8 @@ import Image from 'next/image';
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./carousel.module.css";
 
+
+
 const NextButton = ({ enabled, onClick }) => (
   <button
     className={`${styles.carouselButton} ${styles.carouselButtonNext}`}
